@@ -2,13 +2,14 @@ import './TabsElements.css';
 
 interface ITabsElements {
     style: string,
-    title: string
+    title: string, 
+    elementState: boolean
 }
 
-function TabsElements({style, title}: ITabsElements) {
+function TabsElements({style, title, elementState}: ITabsElements) {
     return ( 
         <>
-            <div className={style}>{title}</div>
+            <button className={style} disabled={elementState} type='button'>{title}</button>
         </>
     );
 }

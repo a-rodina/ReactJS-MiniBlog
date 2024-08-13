@@ -1,0 +1,35 @@
+.all-tabs-element{
+    background-color: #F3F3F3;
+    padding: 0 40px 24px;
+    margin-right: 40px;
+    border: none;
+    border-bottom: 2px solid #313037;
+    color: #313037;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.tabs-element{
+    background-color: #F3F3F3;
+    border: none;
+    padding: 0 40px 24px;
+    margin-right: 40px;
+    color: #313037;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.tabs-element:last-child{
+    margin-right: 0;
+}
+
+.tabs-element:hover{
+    cursor: pointer;
+    color: #2231AA;
+}
+
+.tabs-element:disabled{
+    color: #8D8E97;
+}
