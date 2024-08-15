@@ -1,0 +1,34 @@
+.drop-down {
+    width: 236px;
+    background-color: #FFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #E8E8E8;
+    position: absolute;
+}
+
+.drop-down__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 83px;
+    color: #313037;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.drop-down__item-icon {
+    width: 50%;
+    text-align: center;
+}
+
+.drop-down__item-icon:first-child {
+    border-right: 1px solid #E8E8E8;
+}
+
+.my-icons {
+    color: #313037;
+    font-size: 24px;
+}
