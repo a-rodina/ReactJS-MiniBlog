@@ -1,11 +1,16 @@
 .card-big__wrap {
-    display: flex;
-    justify-content: space-between;
     width: 736px;
     height: 452px;
     border-bottom: 1px solid #DADADA;
+}
+
+.card-big__post {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 30px;
 }
+
 .left-side-card {
     width: 448px;
 }
@@ -47,4 +52,31 @@
     object-position: center;
     width: 100%;
     height: 100%;
+}
+
+.card-big__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.card-big__icon {
+    width: 24px;
+}
+
+.my-icons {
+    color: #313037;
+    font-size: 24px;
+}
+
+.my-icons-down {
+    color: #313037;
+    font-size: 24px;
+    transform: scale(-1, 1);
+}
+
+.card-big__bock-icon {
+    width: 72px;
+    display: flex;
+    justify-content: space-between;
 }

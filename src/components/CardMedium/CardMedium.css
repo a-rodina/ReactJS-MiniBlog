@@ -1,0 +1,50 @@
+.card-medium__wrap {
+    width: 352px;
+    height: 452px;
+    border-bottom: 1px solid #DADADA;
+}
+
+.card-medium__image {
+    width: 352px;
+    height: 246px;
+    margin-bottom: 24px;
+}
+
+.card-medium__image img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card-medium__date {
+    display: block;
+    width: 104px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8D8E97;
+    margin-bottom: 8px;
+}
+
+.card-medium__title {
+    color: #313037;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.card-medium__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.card-medium__bock-icon {
+    width: 72px;
+    display: flex;
+    justify-content: space-between;
+}

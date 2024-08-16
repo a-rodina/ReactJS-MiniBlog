@@ -1,0 +1,65 @@
+.card-small__wrap {
+    width: 352px;
+    height: 206px;
+    border-bottom: 1px solid #DADADA;
+}
+.card-small__wrap:last-child {
+    margin-bottom: 0;
+}
+
+.card-small__post {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.card-small__post-left-side {
+    width: 222px;
+}
+
+.card-big__date {
+    display: block;
+    width: 104px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8D8E97;
+    margin-bottom: 8px;
+}
+
+.card-big__title {
+    color: #313037;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.card-small__post-right-side {
+    width: 96px;
+    height: 96px;
+}
+
+.card-small__post-right-side img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card-small__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.card-small__bock-icon {
+    width: 72px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-small__icon {
+    width: 24px;
+}

@@ -9,11 +9,13 @@ import CardBig from './components/СardBig/CardBig';
 import Header from './components/Header/Header';
 import DropDown from './components/DropDown/DropDown';
 import SelectedPage from './pages/SelectedPage/SelectedPage';
+import PostList from './components/PostList/PostList';
 
 function App() {
   return (
     <>
       <SelectedPage></SelectedPage>
+      <PostList></PostList>
 
       {/* <Button buttonState={true} typeButton="primary" content='Primary'></Button>
       <Button buttonState={false} typeButton="secondary" content='Secondary'></Button>
