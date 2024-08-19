@@ -1,7 +1,13 @@
-.card-big__wrap {
+.card-big__wrap-light {
     width: 736px;
     height: 452px;
     border-bottom: 1px solid #DADADA;
+}
+
+.card-big__wrap-dark {
+    width: 736px;
+    height: 452px;
+    border-bottom: 1px solid #8D8E97;
 }
 
 .card-big__post {
@@ -25,8 +31,17 @@
     margin-bottom: 8px;
 }
 
-.card-big__title {
+.card-big__title-light {
     color: #313037;
+    width: 100%;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 24px;
+}
+
+.card-big__title-dark {
+    color: #FFFFFF;
     width: 100%;
     font-weight: 700;
     font-size: 32px;
@@ -64,13 +79,24 @@
     width: 24px;
 }
 
-.my-icons {
+.my-icons-light {
     color: #313037;
     font-size: 24px;
 }
 
-.my-icons-down {
+.my-icons-dark {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.my-icons-down-light {
     color: #313037;
+    font-size: 24px;
+    transform: scale(-1, 1);
+}
+
+.my-icons-down-dark {
+    color: #FFFFFF;
     font-size: 24px;
     transform: scale(-1, 1);
 }

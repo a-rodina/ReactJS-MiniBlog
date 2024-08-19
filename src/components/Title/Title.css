@@ -1,6 +1,15 @@
-.main-title{
+.main-title-light {
     color: #323537;
     line-height: 80px;
     font-size: 56px;
     font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.main-title-dark {
+    color: #FFFFFF;
+    line-height: 80px;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 40px;
 }

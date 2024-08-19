@@ -1,8 +1,15 @@
-.card-small__wrap {
+.card-small__wrap-light {
     width: 352px;
     height: 206px;
     border-bottom: 1px solid #DADADA;
 }
+
+.card-small__wrap-dark {
+    width: 352px;
+    height: 206px;
+    border-bottom: 1px solid #8D8E97;
+}
+
 .card-small__wrap:last-child {
     margin-bottom: 0;
 }
@@ -18,7 +25,7 @@
     width: 222px;
 }
 
-.card-big__date {
+.card-small__date {
     display: block;
     width: 104px;
     font-weight: 400;
@@ -28,8 +35,16 @@
     margin-bottom: 8px;
 }
 
-.card-big__title {
+.card-small__title-light {
     color: #313037;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.card-small__title-dark {
+    color: #FFFF;
     width: 100%;
     font-weight: 600;
     font-size: 18px;

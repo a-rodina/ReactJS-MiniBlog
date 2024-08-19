@@ -9,9 +9,9 @@ function Tabs({style}: ITabs) {
     return ( 
         <>
             <div className={style}>
-                <TabsElements elementState={false} style='all-tabs-element' title='All'></TabsElements>
-                <TabsElements elementState={false} style='tabs-element' title='My favorites'></TabsElements>
-                <TabsElements elementState={true} style='tabs-element' title='Popular'></TabsElements>
+                <TabsElements elementState={false} style='all-tabs-element-light' title='All'></TabsElements>
+                <TabsElements elementState={false} style='tabs-element-light' title='My favorites'></TabsElements>
+                <TabsElements elementState={true} style='tabs-element-light' title='Popular'></TabsElements>
             </div>
         </>
     );

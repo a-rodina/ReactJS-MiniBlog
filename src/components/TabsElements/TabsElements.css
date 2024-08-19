@@ -1,5 +1,4 @@
-.all-tabs-element{
-    background-color: #F3F3F3;
+.all-tabs-element-light {
     padding: 0 40px 24px;
     margin-right: 40px;
     border: none;
@@ -10,8 +9,18 @@
     line-height: 24px;
 }
 
-.tabs-element{
-    background-color: #F3F3F3;
+.all-tabs-element-dark {
+    padding: 0 40px 24px;
+    margin-right: 40px;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.tabs-element-light{
     border: none;
     padding: 0 40px 24px;
     margin-right: 40px;
@@ -21,15 +30,38 @@
     line-height: 24px;
 }
 
-.tabs-element:last-child{
+.tabs-element-dark{
+    border: none;
+    padding: 0 40px 24px;
+    margin-right: 40px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.tabs-element-light:last-child{
     margin-right: 0;
 }
 
-.tabs-element:hover{
+.tabs-element-light:hover{
     cursor: pointer;
     color: #2231AA;
 }
 
-.tabs-element:disabled{
+.tabs-element-light:disabled{
+    color: #8D8E97;
+}
+
+.tabs-element-dark:last-child{
+    margin-right: 0;
+}
+
+.tabs-element-dark:hover{
+    cursor: pointer;
+    color: #2231AA;
+}
+
+.tabs-element-dark:disabled{
     color: #8D8E97;
 }

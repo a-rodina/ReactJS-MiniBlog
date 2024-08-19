@@ -11,7 +11,7 @@ let data = {
     "author": 7
 }
 
-function SelectedPost() {
+function SelectedPost({style}: {style: string}) {
     return ( 
     <>
         <div className='container'>

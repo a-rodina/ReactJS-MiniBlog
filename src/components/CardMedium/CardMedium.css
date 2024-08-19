@@ -1,7 +1,13 @@
-.card-medium__wrap {
+.card-medium__wrap-light {
     width: 352px;
     height: 452px;
     border-bottom: 1px solid #DADADA;
+}
+
+.card-medium__wrap-dark {
+    width: 352px;
+    height: 452px;
+    border-bottom: 1px solid #8D8E97;
 }
 
 .card-medium__image {
@@ -27,8 +33,17 @@
     margin-bottom: 8px;
 }
 
-.card-medium__title {
+.card-medium__title-light {
     color: #313037;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.card-medium__title-dark {
+    color: #fff;
     width: 100%;
     font-weight: 600;
     font-size: 18px;

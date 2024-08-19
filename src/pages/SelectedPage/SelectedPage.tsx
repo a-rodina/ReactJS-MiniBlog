@@ -5,7 +5,7 @@ function SelectedPage() {
     return ( 
     <>
     <Header></Header>
-    <SelectedPost></SelectedPost>
+    <SelectedPost style='background-light'></SelectedPost>
     </>
     );
 }
