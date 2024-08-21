@@ -1,5 +1,6 @@
 .section__all-posts-light {
     padding: 72px 0;
+    min-height: calc(100vh - 84px);
     background-color: #F3F3F3;
 }
 
