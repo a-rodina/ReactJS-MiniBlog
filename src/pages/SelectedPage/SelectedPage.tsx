@@ -7,12 +7,12 @@ import Spinner from '../../components/Spinner/Spinner';
 
 function SelectedPage() {
 
-    const [post, setPosts] = useState([]);
+    const [post, setPost] = useState([]);
 
     useEffect(() => {
-        fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11')
+        fetch('https://studapi.teachmeskills.by/blog/posts/1/')
             .then(response => response.json())
-            .then(json => setPosts(json.results))
+            .then(json => setPost(json))
     }, [])
 
     return ( 

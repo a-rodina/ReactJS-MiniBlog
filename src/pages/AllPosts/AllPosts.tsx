@@ -12,7 +12,7 @@ function AllPosts() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://studapi.teachmeskills.by/blog/posts/1/')
+        fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11')
             .then(response => response.json())
             .then(json => setPosts(json.results))
     }, [])
