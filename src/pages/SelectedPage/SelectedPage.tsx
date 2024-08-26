@@ -7,7 +7,7 @@ import Spinner from '../../components/Spinner/Spinner';
 
 function SelectedPage() {
 
-    const [post, setPost] = useState([]);
+    const [post, setPost] = useState(null);
 
     useEffect(() => {
         fetch('https://studapi.teachmeskills.by/blog/posts/1/')
@@ -19,7 +19,7 @@ function SelectedPage() {
     <>
         <Header></Header>
         <div className='background-light'>
-            {post.length === 0 ? <Spinner/> : <SelectedPost post={post}></SelectedPost>}
+            {post === null ? <Spinner/> : <SelectedPost post={post}></SelectedPost>}
         </div>
         <Footer></Footer>    
     </>
