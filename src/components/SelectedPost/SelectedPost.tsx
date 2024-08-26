@@ -1,4 +1,5 @@
-import './SelectedPost.css'
+import './SelectedPost.css';
+import { TData } from '../../data';
 
 let data = {
     "id": 1,
@@ -11,21 +12,20 @@ let data = {
     "author": 7
 }
 
-function SelectedPost({style}: {style: string}) {
+function SelectedPost({post}: {post: TData[]}) {
     return ( 
     <>
         <div className='container'>
-            <div className='selected-page'>
                 <nav className='selected-page__navigation'>
                     <div className='selected-page__navigation-item'>Home</div>
-                    <div className='selected-page__navigation-item'>{data.id}</div>
+                    <div className='selected-page__navigation-item'>{post[0].id}</div>
                 </nav>
-                <h1 className='selected-page__title'>{data.title}</h1>
+                <h1 className='selected-page__title'>{post[0].title}</h1>
                 <div className='selected-page__description-wrap'>
                     <div className='selected-page__image-wrap'>
-                        <img alt='image' src={data.image} className='selected-page__image'/>
+                        <img alt='image' src={post[0].image} className='selected-page__image'/>
                     </div>                
-                    <p className='selected-page__text'>{data.description}</p>
+                    <p className='selected-page__text'>{post[0].description}</p>
                     <div className='selected-page__assessment-footer'>
                         <div className='selected-page__assessment'>
                             <div className='selected-page__assessment-icon'>
@@ -41,7 +41,6 @@ function SelectedPost({style}: {style: string}) {
                         </div>
                     </div>
                 </div>        
-            </div>
         </div>
     </>
     );

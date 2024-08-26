@@ -10,7 +10,6 @@ html {
 }
 
 .container {
-    max-width: 1170px;
-    padding: 0 15px;
+    max-width: 1120px;
     margin: auto;
 }

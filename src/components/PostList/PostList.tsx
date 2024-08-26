@@ -1,8 +1,9 @@
+import './PostList.css';
 import { TData } from '../../data';
 import CardBig from '../СardBig/CardBig';
 import CardMedium from '../CardMedium/CardMedium';
 import CardSmall from '../CardSmall/CardSmall';
-import './PostList.css';
+
 
 
 function PostList({posts}: {posts: TData[]}) {

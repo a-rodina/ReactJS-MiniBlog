@@ -5,7 +5,6 @@ import SelectedPage from './pages/SelectedPage/SelectedPage';
 function App() {
   return (
     <>
-      {/* <AllPosts></AllPosts> */}
       <SelectedPage></SelectedPage>
     </>
   );
