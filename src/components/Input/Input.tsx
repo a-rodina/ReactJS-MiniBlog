@@ -1,17 +1,8 @@
 import { useState } from 'react';
 import './Input.css';
+import { TInput } from '../../types/types';
 
-interface IInput {
-    compound: string,
-    inputType: string,
-    title: string,
-    placeholderText: string,
-    isActive: boolean,
-    errorText: string,
-    isError: boolean
-}
-
-function Input({compound, inputType, title, placeholderText, isActive, errorText, isError}: IInput) { 
+function Input({compound, inputType, title, placeholderText, isActive, errorText, isError}: TInput) { 
     
     const [inputText, setInputText] = useState('');
 

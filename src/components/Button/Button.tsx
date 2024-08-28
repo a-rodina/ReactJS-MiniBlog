@@ -1,12 +1,7 @@
 import './Button.css';
+import { TButton } from '../../types/types';
 
-interface IButton {
-    content: string,
-    buttonState: boolean,
-    typeButton: string
-}
-
-function Button({content, buttonState, typeButton}: IButton) {
+function Button({content, buttonState, typeButton}: TButton) {
     return (
         <>
         <button disabled={buttonState} className={typeButton} type='button'>{content}</button>

@@ -1,11 +1,7 @@
 import './Title.css';
 
-interface ITitle {
-    content: string,
-    style: string
-}
 
-function Title({content, style}: ITitle) {
+function Title({content, style}: {content: string, style: string}) {
     return ( 
         <>
         <h1 className={style} >{content}</h1>

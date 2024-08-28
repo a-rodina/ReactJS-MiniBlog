@@ -1,5 +1,5 @@
 import './PostList.css';
-import { TData } from '../../data';
+import { TData } from '../../types/types';
 import CardBig from '../СardBig/CardBig';
 import CardMedium from '../CardMedium/CardMedium';
 import CardSmall from '../CardSmall/CardSmall';

@@ -1,10 +1,6 @@
 import './UserName.css';
 
-interface IUserName {
-    fullName: string,
-}
-
-function UserName({fullName}: IUserName) {
+function UserName({fullName}: {fullName: string}) {
 
     function getInicial(name: string): string{
         let array = name.split(" ");

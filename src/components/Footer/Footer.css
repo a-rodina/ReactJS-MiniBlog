@@ -1,18 +1,18 @@
-.footer-ligth {
+.footer-light {
     background-color: #F3F3F3;
 }
 
-.footer-black {
+.footer-dark {
     background-color: #313037;
 }
 
-.footer-block {
+.footer-block-light {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #dadada;
 }
 
-.footer-block-black {
+.footer-block-dark {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #8D8E97;

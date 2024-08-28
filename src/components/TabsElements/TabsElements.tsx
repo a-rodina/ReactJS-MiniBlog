@@ -1,12 +1,7 @@
 import './TabsElements.css';
+import { TTabsElements } from '../../types/types';
 
-interface ITabsElements {
-    style: string,
-    title: string, 
-    elementState: boolean
-}
-
-function TabsElements({style, title, elementState}: ITabsElements) {
+function TabsElements({style, title, elementState}: TTabsElements) {
     return ( 
         <>
             <button className={style} disabled={elementState} type='button'>{title}</button>

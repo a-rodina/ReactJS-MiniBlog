@@ -3,6 +3,7 @@
     justify-content: flex-start;
     border-bottom: 1px solid #DADADA;
     margin-bottom: 64px;
+    background-color: none;
 }
 
 .tabs-wrap-dark{

@@ -1,17 +1,18 @@
-import TabsElements from '../TabsElements/TabsElements'
+import { useContext } from 'react';
+import { createdContext } from '../../providers/ThemeContext';
 import './Tabs.css';
+import TabsElements from '../TabsElements/TabsElements'
 
-interface ITabs {
-    style: string,
-}
+function Tabs({style}: {style: string}) {
 
-function Tabs({style}: ITabs) {
+    const [color, setColor] = useContext(createdContext);
+
     return ( 
         <>
             <div className={style}>
-                <TabsElements elementState={false} style='all-tabs-element-light' title='All'></TabsElements>
-                <TabsElements elementState={false} style='tabs-element-light' title='My favorites'></TabsElements>
-                <TabsElements elementState={true} style='tabs-element-light' title='Popular'></TabsElements>
+                <TabsElements elementState={false} style={`all-tabs-element-${color}`} title='All'></TabsElements>
+                <TabsElements elementState={false} style={`tabs-element-${color}`} title='My favorites'></TabsElements>
+                <TabsElements elementState={false} style={`tabs-element-${color}`} title='Popular'></TabsElements>
             </div>
         </>
     );
