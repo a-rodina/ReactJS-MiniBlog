@@ -1,0 +1,6 @@
+.search-card {
+    margin-bottom: 40px;
+}
+.search-card:last-child {
+    margin-bottom: 0;
+}
