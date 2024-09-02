@@ -2,6 +2,7 @@ import './SelectedPost.css';
 import { TData } from '../../types/types';
 import { useContext } from 'react';
 import { createdContext } from '../../providers/ThemeContext';
+import { Link } from 'react-router-dom';
 
 function SelectedPost({post}: {post: TData}) {
 
@@ -11,7 +12,7 @@ function SelectedPost({post}: {post: TData}) {
     <>
         <div className='container'>
                 <nav className='selected-page__navigation'>
-                    <div className={`selected-page__navigation-item-${color}`}>Home</div>
+                    <Link to={`/`} className={`selected-page__navigation-item-${color}`}>Home</Link>
                     <div className={`selected-page__navigation-item-${color}`}>{post.id}</div>
                 </nav>
                 <h1 className={`selected-page__title-${color}`}>{post.title}</h1>

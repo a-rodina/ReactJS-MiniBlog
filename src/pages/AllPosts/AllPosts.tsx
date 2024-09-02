@@ -21,7 +21,6 @@ function AllPosts() {
 
     return ( 
     <>
-        <Header></Header>
         <div className={`section__all-posts-${color}`}>
             <div className="container">
                 <Title style={`main-title-${color}`} content='Blog'></Title>

@@ -1,0 +1,35 @@
+.search-form__wrap {
+    height: 84px;
+    max-width: 1522px;
+    background-color: #5360CD;
+    display: flex;
+}
+.search-form__wrap-unactive {
+    display: none;
+}
+
+.search-form__input {
+    display: block;
+    height: 100%;
+    width: 1423px;
+    color: #ffff;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    padding-left: 32px;
+}
+
+.search-form__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-form__xmark {
+    height: 100%;
+    width: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

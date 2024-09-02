@@ -12,13 +12,13 @@ export type TButton = {
 }
 
 export type TInput = {
-    compound: string,
+    compound?: string,
     inputType: string,
-    title: string,
+    title?: string,
     placeholderText: string,
     isActive: boolean,
-    errorText: string,
-    isError: boolean
+    errorText?: string,
+    isError?: boolean
 }
 
 export type TTabsElements = {

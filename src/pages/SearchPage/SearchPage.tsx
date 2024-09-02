@@ -21,7 +21,6 @@ function SearchPage() {
 
     return ( 
     <>
-        <Header></Header>
         <div className={`section__search-${color}`}>
             <div className="container">
                 <Title style={`main-title-${color}`} content='Search results ‘Astronauts’'></Title>
