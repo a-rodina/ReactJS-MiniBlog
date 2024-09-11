@@ -13,3 +13,16 @@
     font-weight: 700;
     margin-bottom: 40px;
 }
+
+@media (max-width: 594px) {
+    .main-title-light  {
+        line-height: 48px;
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+    .main-title-dark  {
+        line-height: 48px;
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+}

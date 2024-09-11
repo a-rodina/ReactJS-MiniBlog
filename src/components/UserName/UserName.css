@@ -24,3 +24,9 @@
     text-align: center;
     padding: 7px 10px;
 }
+
+@media (max-width: 594px) {
+    .container-username {
+        display: none;
+    }
+}

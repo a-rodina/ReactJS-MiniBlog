@@ -12,9 +12,11 @@
     align-items: center;
     justify-content: center;
     border-right: 1px solid #5360CD;
+    position: relative;
 }
 
 .header-right {
+    width: 314px;
     display: flex;
     align-items: center;
 }
@@ -33,4 +35,14 @@
 .my-icon {
     color: #FFFF;
     font-size: 24px;
+}
+
+@media (max-width: 594px) {
+    .header-right {
+        display: block;
+        width: 84px;
+    }
+    .search {
+        margin-right: 0;
+    }
 }

@@ -1,17 +1,16 @@
 .search-form__wrap {
     height: 84px;
-    max-width: 1522px;
     background-color: #5360CD;
     display: flex;
+    flex: 1;
 }
 .search-form__wrap-unactive {
     display: none;
 }
 
 .search-form__input {
-    display: block;
     height: 100%;
-    width: 1423px;
+    width: 100%;
     color: #ffff;
     background-color: transparent;
     font-weight: 400;

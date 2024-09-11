@@ -25,3 +25,20 @@
     color: rgba(141, 142, 151, 1);
     padding: 34px 0;
 }
+
+@media (max-width: 594px) {
+    .footer-block-light {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-block-dark {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-block__text {
+        padding: 24px 0;
+    }
+
+}

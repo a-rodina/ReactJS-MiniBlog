@@ -69,7 +69,7 @@
 
 .selected-page__text-light {
     display: block;
-    width: 922px;
+    width: 100%;
     color: #313037;
     text-align: start;
     font-weight: 400;
@@ -80,7 +80,7 @@
 
 .selected-page__text-dark {
     display: block;
-    width: 922px;
+    width: 100%;
     color: #8D8E97;
     text-align: start;
     font-weight: 400;
@@ -181,4 +181,76 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
+}
+
+@media (max-width: 1140px) {
+    .selected-page__title-light {
+        text-align: center;
+    }
+    
+    .selected-page__title-dark {
+        text-align: center;
+    }
+
+    .selected-page__description-wrap {
+        width: 688px;
+        margin: auto;
+    }
+
+    .selected-page__image-wrap {
+        width: 688px;
+        height: 359px;
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 733px) {
+    .selected-page__title-light {
+        text-align: center;
+        font-size: 32px;
+        line-height: 48px;
+    }
+    
+    .selected-page__title-dark {
+        text-align: center;
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .selected-page__description-wrap {
+        width: 272px;
+        margin: auto;
+    }
+
+    .selected-page__image-wrap {
+        width: 272px;
+        height: 200px;
+        margin-bottom: 36px;
+    }
+
+    .selected-page__assessment-footer {
+        width: 100%;
+        display: inline;
+    }
+
+    .selected-page__assessment {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .selected-page__assessment-icon-light {
+        width: 124px;
+    }
+
+    .selected-page__assessment-icon-dark {
+        width: 124px;
+    }
+
+    .selected-page__add-icon-light {
+        width: 100%;
+    }
+
+    .selected-page__add-icon-dark {
+        width: 100%;
+    }
 }
