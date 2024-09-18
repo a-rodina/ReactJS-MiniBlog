@@ -10,12 +10,12 @@ function CardSmall({date, title, image}: TObject) {
     return ( 
     <>
         <div className={`card-small__wrap-${color}`}>
-            <div className='card-small__post'>
-                <div className='card-small__post-left-side'>
+            <div id='flex' className='card-small__post'>
+                <div id='a' className='card-small__post-left-side'>
                     <p className='card-small__date'>{date}</p>
                     <h2 className={`card-small__title-${color}`}>{title}</h2>
                 </div>
-                <div className='card-small__post-right-side'>
+                <div id='b' className='card-small__post-right-side'>
                     <img src={image} alt='image'></img>
                 </div>
             </div>

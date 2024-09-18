@@ -10,13 +10,13 @@ function CardBig({date, title, description, image}: TObject) {
     return (
     <>
     <div className={`card-big__wrap-${color}`}>
-        <div className='card-big__post'>
-            <div className='left-side-card'>
+        <div id="flex" className='card-big__post'>
+            <div id='a' className='left-side-card'>
                 <p className='card-big__date'>{date}</p>
                 <h2 className={`card-big__title-${color}`}>{title}</h2>
                 <div className='card-big__description'>{description}</div>
             </div>
-            <div className='right-side-card'>
+            <div id='b' className='right-side-card'>
                 <img src={image} alt='image'></img>
             </div>
         </div>
