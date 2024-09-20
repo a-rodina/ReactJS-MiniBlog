@@ -2,10 +2,9 @@ import './SearchOpen.css';
 import { useState } from 'react';
 import { TInput } from '../../types/types';
 
-function SearchOpen({inputType, placeholderText, isActive}: TInput) {
+function SearchOpen({inputType, placeholderText, isActive, value}: TInput) {
 
     const [inputText, setInputText] = useState('');
-    const [isSearchOpen, setIsSearchOpen] = useState(true);
 
     return ( 
         <>

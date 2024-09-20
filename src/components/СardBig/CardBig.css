@@ -75,8 +75,22 @@
     margin-bottom: 40px;
 }
 
-.card-big__icon {
+.card__icon {
     width: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.card__likes-light {
+    color: #313037;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card__likes-dark {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .my-icons-light {

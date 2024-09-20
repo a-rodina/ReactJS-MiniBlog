@@ -94,7 +94,6 @@
     transform: scale(-1, 1);
 }
 
-
 @media (max-width: 1140px) {
     .card-search__post-right-side {
         width: 560px;

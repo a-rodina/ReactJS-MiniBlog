@@ -1,8 +1,6 @@
 export type TObject = {
-    date: string,
-    title: string,
-    description?: string,
-    image: string
+    post: any,
+    addToFavorites: (post: any) => void
 }
 
 export type TButton = {
@@ -18,13 +16,15 @@ export type TInput = {
     placeholderText: string,
     isActive: boolean,
     errorText?: string,
-    isError?: boolean
+    isError?: boolean,
+    value?: string
 }
 
 export type TTabsElements = {
     style: string,
     title: string, 
-    elementState: boolean
+    elementState: boolean, 
+    changeActive: () => void
 }
 
 export type TData = {

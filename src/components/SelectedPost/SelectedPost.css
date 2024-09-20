@@ -127,23 +127,43 @@
 .my-icons-light {
     color: #313037;
     font-size: 24px;
+    display: block;
+    margin-right: 6px;
 }
 
 .my-icons-dark {
     color: #FFFFFF;
     font-size: 24px;
+    display: block;
+    margin-right: 6px;
 }
 
 .my-icons-down-light {
     color: #313037;
     font-size: 24px;
     transform: scale(-1, 1);
+    display: block;
+    margin-right: 6px;
 }
 
 .my-icons-down-dark {
     color: #fff;
     font-size: 24px;
     transform: scale(-1, 1);
+    display: block;
+    margin-right: 6px;
+}
+
+.selected-post__likes-light {
+    font-size: 16px;
+    font-weight: 600;
+    color: #313037;
+}
+
+.selected-post__likes-dark {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
 }
 
 .selected-page__add-icon-light {
