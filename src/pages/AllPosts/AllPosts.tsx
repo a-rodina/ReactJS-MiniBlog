@@ -1,34 +1,32 @@
 import './AllPosts.css';
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { createdContext } from '../../providers/ThemeContext';
-import Header from "../../components/Header/Header";
 import PostList from "../../components/PostList/PostList";
 import Title from '../../components/Title/Title';
 import Tabs from '../../components/Tabs/Tabs';
 import Spinner from '../../components/Spinner/Spinner';
 import Footer from '../../components/Footer/Footer';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import SecondPostList from '../../components/SecondPostList/SecondPostList';
+import { getPosts } from '../../slice/blog';
 
 function AllPosts() {
 
-    const [posts, setPosts] = useState([]);
     const [color, setColor] = useContext(createdContext);
 
     const data = useSelector((state: any) => state.blog);
+    const dispatch = useDispatch<any>();
 
     function checkActiveTab() {
         if (data.activeTab === 'all') {
-            return (posts.length === 0 ? <Spinner/> : <PostList posts={posts}></PostList>);
+            return (data.posts.length === 0 ? <Spinner/> : <PostList posts={data.posts}></PostList>);
         } else if (data.activeTab === 'favorites') {
-            return (data.favorites.length === 0 ? <div className='container'>No favorites</div> : <PostList posts={data.favorites}></PostList>);
+            return (data.favorites.length === 0 ? <div className='container'>No favorites</div> : <SecondPostList posts={data.favorites}></SecondPostList>);
         }
-
     }
 
     useEffect(() => {
-        fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11')
-            .then(response => response.json())
-            .then(json => setPosts(json.results))
+        dispatch(getPosts())
     }, [])
 
     return ( 

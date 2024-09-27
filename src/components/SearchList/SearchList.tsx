@@ -12,6 +12,12 @@ function SearchList({posts}: {posts: TData[]}) {
         dispatch(addToFavorite(post))
     }
 
+    // function createSearchList(posts: any) {
+    //     posts.map((item: any, index: any) => {
+    //     <div className='search-card'><SearchCard addToFavorites={addToFavorites} post={item[index]}></SearchCard></div>
+    //     })
+    // }
+
     return ( 
     <>
         <div className='container'>

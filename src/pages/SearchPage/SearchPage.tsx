@@ -5,17 +5,18 @@ import Title from '../../components/Title/Title';
 import SearchList from '../../components/SearchList/SearchList';
 import Spinner from '../../components/Spinner/Spinner';
 import Footer from '../../components/Footer/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPosts } from '../../slice/blog';
 
 
 function SearchPage( ) {
 
-    const [posts, setPosts] = useState([]);
     const [color, setColor] = useContext(createdContext);
+    const data = useSelector((state: any) => state.blog);
+    const dispatch = useDispatch<any>();
 
     useEffect(() => {
-        fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11')
-            .then(response => response.json())
-            .then(json => setPosts(json.results))
+        dispatch(getPosts())
     }, [])
 
     return ( 
@@ -24,7 +25,7 @@ function SearchPage( ) {
             <div className="container">
                 <Title style={`main-title-${color}`} content='Search results'></Title>
             </div>
-            {posts.length === 0 ? <Spinner/> : <SearchList posts={posts}></SearchList>}
+            {data.posts.length === 0 ? <Spinner/> : <SearchList posts={data.posts}></SearchList>}
         </div>
         <Footer></Footer>
     </> 

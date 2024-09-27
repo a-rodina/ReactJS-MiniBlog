@@ -17,16 +17,17 @@ function PostList({posts}: {posts: TData[]}) {
     }
 
     // function createPostList(array: any) {
-    //     return array.forEach((item: any) => {
+    //     return array.map((item: any, index: any) => {
     //         if (array.length === 0) {
     //             return ;
     //         } else if (array.length === 1) {
-    //             return (<div className='big'><CardBig addToFavorites={addToFavorites} post={item[0]}></CardBig></div>);
+    //             return (<div className='big'><CardBig key={index} addToFavorites={addToFavorites} post={item[index]}></CardBig></div>);
     //         } else if (array.length > 1 && array.length < 6) {
-    //             return (<div className='medium1'><CardMedium addToFavorites={addToFavorites} post={item[1]}></CardMedium></div>)
+    //             return (<div className='medium1'><CardMedium key={index} addToFavorites={addToFavorites} post={item[index]}></CardMedium></div>)
     //         } else if (array.length >= 6 && array.length <= 11) {
-    //             return (<div className='small1'><CardSmall addToFavorites={addToFavorites} post={item[5]}></CardSmall></div>)
+    //             return (<div className='small1'><CardSmall key={index} addToFavorites={addToFavorites} post={item[index]}></CardSmall></div>)
     //         }
+    //         console.log(array)
     //     })
     // }
 

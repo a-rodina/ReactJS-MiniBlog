@@ -15,6 +15,7 @@ function CardMedium({post, addToFavorites}: TObject) {
 
     return ( 
     <>
+    <li>
         <div className={`card-medium__wrap-${color}`}>
             <Link to={`/${post.id}`}>
                 <div className='card-medium__image'>
@@ -44,6 +45,9 @@ function CardMedium({post, addToFavorites}: TObject) {
                 </div>
             </div>
         </div>
+    </li>
+        
+        
     </> 
     );
 }

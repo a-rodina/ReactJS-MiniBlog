@@ -10,6 +10,8 @@ function CardBig({post, addToFavorites}: TObject) {
 
     const [color, setColor] = useContext(createdContext);
 
+    // const {id, image, text, date, lesson_num, title, description, author} = post
+
     const dispatch = useDispatch();
     const data = useSelector((state:any) => state.blog)
 

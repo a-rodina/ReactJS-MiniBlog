@@ -1,4 +1,38 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+export const getPosts = createAsyncThunk(
+    "blog/getPosts", 
+    async function (_, {rejectWithValue}) {
+        try {
+            const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11');
+            if(!response.ok) {
+                throw new Error("Не удалось загрузить данные")
+            }
+            const data = await response.json();
+            return data;
+        }
+        catch (error) {
+            return rejectWithValue((error as Error).message)
+        }
+    }
+)
+
+export const getOnePost = createAsyncThunk(
+    "blog/getOnePost", 
+    async function (postTd: string | undefined, {rejectWithValue}) {
+        try {
+            const response = await fetch(`https://studapi.teachmeskills.by/blog/posts/${postTd}/`);
+            if(!response.ok) {
+                throw new Error("Не удалось загрузить данные")
+            }
+            const data = await response.json();
+            return data;
+        }
+        catch (error) {
+            return rejectWithValue((error as Error).message)
+        }
+    }
+)
 
 const blogSlice = createSlice({
     name: 'blog',
@@ -6,7 +40,10 @@ const blogSlice = createSlice({
         like: 0,
         dislike: 0,
         favorites: [], 
-        activeTab: 'all'
+        activeTab: 'all',
+        posts: [],
+        error: null,
+        status: null
     },
     reducers: {
         increment(state: any) {
@@ -21,6 +58,34 @@ const blogSlice = createSlice({
         changeActiveTab(state: any, {payload}: {payload :any}) {
             state.activeTab = payload;
         }
+    },
+    extraReducers: (builder) => {
+        return builder.addCase(getPosts.pending, (state: any) => {
+            state.status = 'loading';
+            state.error = null;
+        }), 
+        builder.addCase(getPosts.fulfilled, (state: any, {payload}: {payload :any}) => {
+            state.status = 'resolved';
+            state.error = null;
+            state.posts = payload.results;
+        }), 
+        builder.addCase(getPosts.rejected, (state: any, {payload}: {payload :any}) => {
+            state.status = 'rejected';
+            state.error = payload;
+        }),
+        builder.addCase(getOnePost.pending, (state: any) => {
+            state.status = 'loading';
+            state.error = null;
+        }), 
+        builder.addCase(getOnePost.fulfilled, (state: any, {payload}: {payload :any}) => {
+            state.status = 'resolved';
+            state.error = null;
+            state.posts = payload;
+        }), 
+        builder.addCase(getOnePost.rejected, (state: any, {payload}: {payload :any}) => {
+            state.status = 'rejected';
+            state.error = payload;
+        })
     }
 })
 
