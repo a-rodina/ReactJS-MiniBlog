@@ -43,7 +43,8 @@ const blogSlice = createSlice({
         activeTab: 'all',
         posts: [],
         error: null,
-        status: null
+        status: null, 
+        post: null
     },
     reducers: {
         increment(state: any) {
@@ -80,7 +81,7 @@ const blogSlice = createSlice({
         builder.addCase(getOnePost.fulfilled, (state: any, {payload}: {payload :any}) => {
             state.status = 'resolved';
             state.error = null;
-            state.posts = payload;
+            state.post = payload;
         }), 
         builder.addCase(getOnePost.rejected, (state: any, {payload}: {payload :any}) => {
             state.status = 'rejected';

@@ -24,7 +24,7 @@ function SelectedPage() {
     return ( 
     <>
         <div className={`background-${color}`}>
-            {data.posts === null ? <Spinner/> : <SelectedPost post={data.posts}></SelectedPost>}
+            {data.post === null ? <Spinner/> : <SelectedPost post={data.post}></SelectedPost>}
         </div>
         <Footer></Footer>    
     </>

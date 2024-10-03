@@ -16,27 +16,10 @@ function PostList({posts}: {posts: TData[]}) {
         dispatch(addToFavorite(post))
     }
 
-    // function createPostList(array: any) {
-    //     return array.map((item: any, index: any) => {
-    //         if (array.length === 0) {
-    //             return ;
-    //         } else if (array.length === 1) {
-    //             return (<div className='big'><CardBig key={index} addToFavorites={addToFavorites} post={item[index]}></CardBig></div>);
-    //         } else if (array.length > 1 && array.length < 6) {
-    //             return (<div className='medium1'><CardMedium key={index} addToFavorites={addToFavorites} post={item[index]}></CardMedium></div>)
-    //         } else if (array.length >= 6 && array.length <= 11) {
-    //             return (<div className='small1'><CardSmall key={index} addToFavorites={addToFavorites} post={item[index]}></CardSmall></div>)
-    //         }
-    //         console.log(array)
-    //     })
-    // }
-
     return ( 
     <>
         <div className='container'>
             <div className='post-list__wrap'>
-                {/* {createPostList(posts)} */}
-
                 <div className='big'><CardBig addToFavorites={addToFavorites} post={posts[0]}></CardBig></div>
                 <div className='medium1'><CardMedium addToFavorites={addToFavorites} post={posts[1]}></CardMedium></div>
                 <div className='medium2'><CardMedium addToFavorites={addToFavorites} post={posts[2]}></CardMedium></div>

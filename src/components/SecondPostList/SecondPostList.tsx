@@ -13,12 +13,13 @@ function SecondPostList({posts}: {posts: TData[]}) {
     }
 
     return ( <>
-        <div className="cardsList">
-        <ul>
-            {posts.map((item: any, index: any) => <CardMedium addToFavorites={addToFavorites} key={item.id} post={item[index]}/>)}
-        </ul>
-    </div>
-        
+        <section className="second-card-list">
+            <div className='container'>
+                <ul className='card-list'>
+                    {posts.map((item: any) => <li className='card-list-item'><CardMedium addToFavorites={addToFavorites} key={item.id} post={item}/></li>)}
+                </ul>
+            </div>
+    </section>
     </> );
 }
 
