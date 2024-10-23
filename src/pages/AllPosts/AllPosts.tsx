@@ -21,7 +21,7 @@ function AllPosts() {
         if (data.activeTab === 'all') {
             return (data.posts.length === 0 ? <Spinner/> : <PostList posts={data.posts}></PostList>);
         } else if (data.activeTab === 'favorites') {
-            return (data.favorites.length === 0 ? <div className='container'>No favorites</div> : <SecondPostList posts={data.favorites}></SecondPostList>);
+            return (data.favorites.length === 0 ? <div className='container'><p className={`favorites-text-${color}`}>No favorites</p></div> : <SecondPostList posts={data.favorites}></SecondPostList>);
         }
     }
 
@@ -37,7 +37,6 @@ function AllPosts() {
                 <Tabs style={`tabs-wrap-${color}`}></Tabs>
             </div>
             {checkActiveTab()}
-            {/* {posts.length === 0 ? <Spinner/> : <PostList posts={posts}></PostList>} */}
         </div>
         <Footer></Footer>
     </> 

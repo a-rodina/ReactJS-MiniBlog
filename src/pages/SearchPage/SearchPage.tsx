@@ -1,23 +1,19 @@
 import './SearchPage.css';
-import { useEffect, useState, useContext } from 'react';
+import { useContext } from 'react';
 import { createdContext } from '../../providers/ThemeContext';
 import Title from '../../components/Title/Title';
 import SearchList from '../../components/SearchList/SearchList';
-import Spinner from '../../components/Spinner/Spinner';
 import Footer from '../../components/Footer/Footer';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPosts } from '../../slice/blog';
+import { useSelector } from 'react-redux';
 
 
 function SearchPage( ) {
 
     const [color, setColor] = useContext(createdContext);
     const data = useSelector((state: any) => state.blog);
-    const dispatch = useDispatch<any>();
 
-    useEffect(() => {
-        dispatch(getPosts())
-    }, [])
+    console.log(data.search)
+
 
     return ( 
     <>
@@ -25,7 +21,7 @@ function SearchPage( ) {
             <div className="container">
                 <Title style={`main-title-${color}`} content='Search results'></Title>
             </div>
-            {data.posts.length === 0 ? <Spinner/> : <SearchList posts={data.posts}></SearchList>}
+            {data.search.length === 0 ? <div className='container'><p className={`search-text-${color}`}>Enter your request</p></div> : <SearchList posts={data.search}></SearchList>}
         </div>
         <Footer></Footer>
     </> 

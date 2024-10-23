@@ -16,7 +16,7 @@ function SecondPostList({posts}: {posts: TData[]}) {
         <section className="second-card-list">
             <div className='container'>
                 <ul className='card-list'>
-                    {posts.map((item: any) => <li className='card-list-item'><CardMedium addToFavorites={addToFavorites} key={item.id} post={item}/></li>)}
+                    {posts.map((item: any) => <li className='card-list-item' key={item.id}><CardMedium addToFavorites={addToFavorites} post={item}/></li>)}
                 </ul>
             </div>
     </section>

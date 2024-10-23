@@ -15,7 +15,7 @@ function SearchList({posts}: {posts: TData[]}) {
     return ( 
     <>
         <div className='container'>
-                {posts.map((item: any, index: any) => <div className='search-card'><SearchCard addToFavorites={addToFavorites} post={item}></SearchCard></div>)}
+                {posts.map((item: any) => <div key={item.id} className='search-card'><SearchCard addToFavorites={addToFavorites} post={item}></SearchCard></div>)}
         </div> 
     </> 
     );
