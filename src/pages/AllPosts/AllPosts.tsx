@@ -8,7 +8,7 @@ import Spinner from '../../components/Spinner/Spinner';
 import Footer from '../../components/Footer/Footer';
 import { useDispatch, useSelector } from 'react-redux';
 import SecondPostList from '../../components/SecondPostList/SecondPostList';
-import { getPosts } from '../../slice/blog';
+import { decrementOffset, getPosts, incrementOffset } from '../../slice/blog';
 
 function AllPosts() {
 
@@ -25,9 +25,17 @@ function AllPosts() {
         }
     }
 
+    function goToNext() {
+        dispatch(incrementOffset())
+    }
+
+    function goToBack(){
+        dispatch(decrementOffset())
+    }
+
     useEffect(() => {
-        dispatch(getPosts())
-    }, [])
+        dispatch(getPosts(data.offset))
+    }, [data.offset])
 
     return ( 
     <>
@@ -37,6 +45,22 @@ function AllPosts() {
                 <Tabs style={`tabs-wrap-${color}`}></Tabs>
             </div>
             {checkActiveTab()}
+            <div className='container'>
+                <div className='pagination'>
+                    <div className='prev' onClick={goToBack}>
+                        <div className='block-icon'>
+                            <i className={`fa-solid fa-arrow-left pagination-icons-${color}`}></i>
+                        </div>
+                        <div className={`prev-next-button-${color}`}>Previous</div>
+                    </div>
+                    <div className='next' onClick={goToNext}>
+                        <div className={`prev-next-button-${color}`}>Next</div>
+                        <div className='block-icon'>
+                            <i className={`fa-solid fa-arrow-right pagination-icons-${color}`}></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <Footer></Footer>
     </> 

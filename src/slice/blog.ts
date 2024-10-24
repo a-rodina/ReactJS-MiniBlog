@@ -3,9 +3,9 @@ import { TData } from "../types/types";
 
 export const getPosts = createAsyncThunk(
     "blog/getPosts", 
-    async function (_, {rejectWithValue}) {
+    async function (offset: any, {rejectWithValue}) {
         try {
-            const response = await fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11');
+            const response = await fetch(`https://studapi.teachmeskills.by/blog/posts/?limit=11&offset=${offset}`);
             if(!response.ok) {
                 throw new Error("Не удалось загрузить данные")
             }
@@ -39,7 +39,7 @@ export const searchPost = createAsyncThunk(
     "blog/searchPost", 
     async function (search: any, {rejectWithValue}) {
         try {
-            const response = await fetch(`https://studapi.teachmeskills.by/blog/posts/?limit=11&search=${search}/`);
+            const response = await fetch(`https://studapi.teachmeskills.by/blog/posts/?limit=11&search=${search}`);
             if(!response.ok) {
                 throw new Error("Не удалось загрузить данные")
             }
@@ -63,7 +63,8 @@ const blogSlice = createSlice({
         error: null,
         status: null, 
         post: null, 
-        search: []
+        search: [],
+        offset: 0
     },
     reducers: {
         increment(state: any) {
@@ -79,7 +80,13 @@ const blogSlice = createSlice({
         },
         changeActiveTab(state: any, {payload}: {payload :any}) {
             state.activeTab = payload;
-        }
+        }, 
+        incrementOffset(state: any) {
+            state.offset += 11;
+        },
+        decrementOffset(state: any) {
+            state.offset -= 11;
+        },
     },
     extraReducers: (builder) => {
         return builder.addCase(getPosts.pending, (state: any) => {
@@ -98,6 +105,7 @@ const blogSlice = createSlice({
         builder.addCase(getOnePost.pending, (state: any) => {
             state.status = 'loading';
             state.error = null;
+            state.post = null;
         }), 
         builder.addCase(getOnePost.fulfilled, (state: any, {payload}: {payload :any}) => {
             state.status = 'resolved';
@@ -127,4 +135,4 @@ const blogSlice = createSlice({
 const {actions, reducer} = blogSlice;
 
 export default reducer;
-export const {increment, decrement, addToFavorite, changeActiveTab} = actions;
+export const {increment, decrement, addToFavorite, changeActiveTab, incrementOffset, decrementOffset} = actions;

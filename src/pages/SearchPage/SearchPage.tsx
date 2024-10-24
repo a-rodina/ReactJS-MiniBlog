@@ -21,7 +21,7 @@ function SearchPage( ) {
             <div className="container">
                 <Title style={`main-title-${color}`} content='Search results'></Title>
             </div>
-            {data.search.length === 0 ? <div className='container'><p className={`search-text-${color}`}>Enter your request</p></div> : <SearchList posts={data.search}></SearchList>}
+            {data.search.length === 0 ? <div className='container'><p className={`search-text-${color}`}>Enter your request</p></div> : <SearchList posts={data.search.results}></SearchList>}
         </div>
         <Footer></Footer>
     </> 
